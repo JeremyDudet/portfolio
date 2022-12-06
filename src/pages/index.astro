@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Socials from "../components/Socials.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main
+    class="p-2 w-screen mx-auto bg-gradient-to-b from-fristGradient to-secondGradient bg-fixed"
+  >
+    <Navbar />
+    <section class="pt-12 max-w-lg mx-auto">
+      <div>
+        <h1 class="font-black text-primary text-5xl mb-2">
+          Front-end Software Developer
+        </h1>
+        <h2
+          class="text-primary text-5xl font-[100] font-serif leading-10 mb-10"
+        >
+          Based in the SF Bay Area
+        </h2>
+        <!-- button that scrolls down to projects-->
+        <a
+          href="#projects"
+          class="btn bg-[#4840BC] text-secondary text-xl font-normal font-serif"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 inline-block"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+          <span class="align-middle">View Projects</span>
+        </a>
+      </div>
+      <div class="h-px bg-primary w-full relative my-20"></div>
+      <div class="float-right mr-40">
+        <img
+          class="absolute top-[430px] min-[471px]:top-[390px] min-[507px]:top-[350px]"
+          src="/laptop.png"
+          width="175"
+          alt="laptop"
+        />
+      </div>
+      <Skills />
+      <div class="h-px bg-primary w-full relative my-20"></div>
+      <Projects />
+    </section>
+  </main>
+  <footer class="w-screen bg-[#19182C]">
+    <Contact />
+    <!-- <div class="h-px bg-secondary w-full relative"></div>
+    <Socials /> -->
+  </footer>
+</Layout>
